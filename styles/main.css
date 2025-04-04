@@ -46,10 +46,11 @@ header {
 .logo {
   font-size: 3rem;
   color: #812975;
-  font-weight: 800;
+  font-weight: 900;
   cursor: pointer;
   transition: 0.5s ease;
   margin-left: -10%;
+  margin-top: 20px;
 }
 
 .logo:hover {
@@ -68,7 +69,6 @@ nav a {
 
 nav a:hover,
 nav a.active {
-  color: #620544;
   border-bottom: 3px solid #dbbcd7;
 }
 
@@ -79,7 +79,7 @@ nav a.active {
     top: 0;
     left: 0;
     width: 100%; /* Full width for a horizontal layout */
-    background-color: #161616;
+    background-color: #4b0150;
     border-bottom: 0.3px solid #fff; /* Reduced thickness */
     border-left: none; /* Remove left border */
     border-top: none; /* Remove top border */
@@ -103,7 +103,6 @@ nav a.active {
 
   nav a:hover,
   nav a.active {
-    background-color: #4b0150; /* Dark purple highlight */
     border-bottom: none;
   }
 }
