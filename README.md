@@ -21,7 +21,18 @@ This is my personal portfolio website, built using HTML, CSS, and JavaScript. It
 
     CSS – Styling the website with animations and effects.
 
-    JavaScript – Adding interactive elements like the typing effect.
+    📜 How to Use
+
+Clone the repository:
+
+git clone https://github.com/Natandi/Portfolio-Challenge.git
+
+Open index.html in your browser or deploy it using a static site host.
+Customize content by editing the .html and .css files.
+
+Live Link
+
+https://natandi.github.io/Portfolio-Challenge/
 
 📬 Contact
 

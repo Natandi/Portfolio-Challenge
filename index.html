@@ -141,26 +141,37 @@
       </ul>
     </section>
 
+  <!-- contact section -->
     
-    <section class="contact" id="contact">
-      <h3>📞 Contact Me</h3>
-      <p>If you would like to get in touch, feel free to reach out!</p>
-      <<form
-      action="mailto:chunguzulu@gmail.com"
-      method="POST"
-      enctype="text/plain"
-    >
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+  <section class="contact" id="contact">
+    <div class="contact-container">
+      <form onsubmit="sendEmail(); return false;">
+        <h1><span>Connect with me</span></h1>
   
-    <p style="margin-top: 1rem;">
-      Or reach out directly via email:
-      <a href="chunguzulu@gmail.com">chunguzulu@gmail.com</a><br />
-      Or call:
-      <a href="tel:+260963916712">+260963916712</a>
+        <!-- Input Fields -->
+        <label for="name">NAME*</label>
+        <input type="text" id="name" name="name" required />
+  
+        <label for="email">EMAIL*</label>
+        <input type="email" id="email" name="email" required />
+  
+        <label for="message">MESSAGE*</label>
+        <input type="text" id="message" name="message" required />
+  
+        <!-- Submit Button -->
+        <button type="submit">SEND</button>
+      </form>
+  
+      <!-- Optional Direct Contact Info -->
+      <p style="margin-top: 1rem;">
+        Or reach out directly via email:
+        <a href="mailto:chunguzulu@gmail.com">chunguzulu@gmail.com</a><br />
+        Or call:
+        <a href="tel:+260963916712">+260963916712</a>
+      </p>
+    </div>
+  </section>
+  
     </p>
       </form>
     </section>

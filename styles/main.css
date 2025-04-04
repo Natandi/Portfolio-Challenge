@@ -59,7 +59,7 @@ header {
 /* Navigation */
 nav a {
   font-size: 1.8rem;
-  color: #dbbcd7;
+  color: #4b0150;
   font-weight: 500;
   margin-left: 4rem;
   transition: 0.3s ease;
@@ -68,29 +68,43 @@ nav a {
 
 nav a:hover,
 nav a.active {
-  color: #fff;
+  color: #620544;
   border-bottom: 3px solid #dbbcd7;
 }
 
 /* Responsive Navigation */
 @media (max-width: 995px) {
   nav {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 40%;
-    border-left: 3px solid #fff;
-    border-bottom: 3px solid #fff;
-    border-bottom-left-radius: 2rem;
-    padding: 1rem;
+    position: fixed; /* Keeps navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width for a horizontal layout */
     background-color: #161616;
-    border-top: 0.1rem solid #fff;
+    border-bottom: 0.3px solid #fff; /* Reduced thickness */
+    border-left: none; /* Remove left border */
+    border-top: none; /* Remove top border */
+    border-right: none; /* Remove right border */
+    padding: 1rem 2rem;
+    z-index: 1000; /* Ensures it stays above content */
+    display: flex;
+    justify-content: space-around; /* Spaces links evenly */
+    align-items: center;
   }
 
   nav a {
-    display: block;
-    font-size: 2rem;
-    margin: 3rem 0;
+    display: inline-block;
+    font-size: 1.5rem; /* Slightly smaller for horizontal spacing */
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem; /* Adds spacing between links */
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+  }
+
+  nav a:hover,
+  nav a.active {
+    background-color: #4b0150; /* Dark purple highlight */
+    border-bottom: none;
   }
 }
 
@@ -277,7 +291,7 @@ span {
   font-weight: bold;
   margin-bottom: 2rem;
   color: #812975;
-  margin-top: 10px;
+  margin-top: 100px;
 }
 
 .about p,
@@ -310,7 +324,7 @@ span {
 .projects h3,
 .interests h3,
 .contact h3 {
-  margin-top: 10px;
+  margin-top: 100px;
   text-align: center;
 }
 .contact p {
@@ -320,56 +334,92 @@ span {
 }
 
 /* Contact Form */
-.contact-form {
-  max-width: 600px;
-  margin: 5rem auto;
-  padding: 3rem;
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(219, 188, 215, 0.5);
-}
-
-.contact-form h2 {
-  font-size: 3rem;
+/* Container Styling */
+.contact {
+  background-color: #f272e9;
+  padding: 4rem 2rem;
   text-align: center;
-  margin-bottom: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 1.5rem;
-  margin: 1rem 0;
-  font-size: 1.6rem;
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  border-radius: 5px;
-  border: 2px solid #dbbcd7;
-  transition: 0.3s ease;
+.contact-container {
+  max-width: 600px;
+  margin-top: 40px;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: 60px;
+  background-color: #f272e9;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: white;
-}
-
-.contact-form button {
-  display: block;
-  width: 100%;
-  padding: 1.5rem;
+/* Heading */
+.contact-container h1 span {
   font-size: 1.8rem;
-  background-color: #dbbcd7;
-  color: black;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s ease;
-  border: none;
+  color: #812975;
 }
 
-.contact-form button:hover {
-  background-color: white;
-  color: #dbbcd7;
-  box-shadow: 0 0 15px #dbbcd7;
+/* Labels and Inputs */
+.contact-container label {
+  display: block;
+  text-align: left;
+  margin: 1rem 0 0.5rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.contact-container input,
+.contact-container textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.contact-container input:focus,
+.contact-container textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Textarea Specific */
+.contact-container textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Button */
+.contact-container button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 2rem;
+  background-color: #812975;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-container button:hover {
+  background-color: #c1b8bf;
+}
+
+/* Contact Info Text */
+.contact-container p {
+  margin-top: 2rem;
+  color: #666;
+}
+
+.contact-container a {
+  color: #812975;
+  text-decoration: none;
+}
+
+.contact-container a:hover {
+  text-decoration: underline;
 }
